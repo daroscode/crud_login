@@ -33,8 +33,8 @@
           <td><?php echo $users['surname']; ?></td>
           <td><?php echo $users['caddate']; ?></td>
           <td>
-             <label class="switch">
-                <input type="checkbox" name="status" id="status<?php echo $users['id']; ?>" class="toggle-checkbox" <?php echo ($users['status'] == 1)? 'checked':'unchecked'; ?> onclick="statusChanger(<?php echo $users['id']; ?>)" />                   
+              <label class="switch">
+                  <input type="checkbox" name="status" id="status<?php echo $users['id']; ?>" <?php echo ($users['status'] == 1)?'checked':'unchecked'; ?> onclick="statusChanger(<?php echo $users['id'] ?>)" />
                 <span class="slider"></span>
               </label>
           </td>
