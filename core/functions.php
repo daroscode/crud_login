@@ -105,3 +105,13 @@ if (isset($_GET['delid']) && !empty($_GET['delid'])) {
     $query = $db->query($query);
     header("Location: ../index.php");
 }
+
+// ALTERAR STATUS DOS REGISTROS
+if (isset($_POST['action']) && $_POST['action'] === "status") {
+   $checked = $_POST['checked']; 
+   $id = $_POST['id']; 
+
+   
+   $query = "UPDATE users SET status = '{$checked}' WHERE id = {$id}";
+   $query = $db->query($query);
+}

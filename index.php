@@ -20,6 +20,7 @@
       <th scope="col">Nome</th>
       <th scope="col">Sobrenome</th>
       <th scope="col">Dt. Cadastro</th>
+      <th scope="col">Status</th>
       <th scope="col">Opções</th>
     </tr>
   </thead>
@@ -31,6 +32,12 @@
           <td><?php echo $users['name']; ?></td>
           <td><?php echo $users['surname']; ?></td>
           <td><?php echo $users['caddate']; ?></td>
+          <td>
+             <label class="switch">
+                <input type="checkbox" name="status" id="status<?php echo $users['id']; ?>" class="toggle-checkbox" <?php echo ($users['status'] == 1)? 'checked':'unchecked'; ?> onclick="statusChanger(<?php echo $users['id']; ?>)" />                   
+                <span class="slider"></span>
+              </label>
+          </td>
           <td>
             <a href="update.php?id=<?php echo $users['id']; ?>">Editar</a>
             <a href="core/functions.php?delid=<?php echo $users['id']; ?>">Excluir</a>
