@@ -7,7 +7,7 @@
 
 ?>
 <div class="container">
-<h1>CRUD em PHP para iniciantes</h1>
+<h1>CRUD em PHP</h1>
 <a href="create.php" class="btn btn-primary">Criar registro</a>
 <a href="core/functions.php?logout" class="btn btn-danger">Sair do sistema</a>
 <br />

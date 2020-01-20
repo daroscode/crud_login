@@ -2,7 +2,7 @@
 <div class="container">
 <h1>Atualizar registro</h1>
 <?php foreach($update as $user): ?>
-    <form method="POST">
+    <form method="POST" onsubmit="confirmSave();">
         <div class="form-group">
             <label for="">Nome:</label>
             <input type="text" name="name" class="form-control" value="<?php echo $user['name'] ?>" />
@@ -19,3 +19,11 @@
 <?php endforeach; ?>
 </div>
 <?php require 'footer.php' ?>
+<script type="text/javascript">
+  function confirmSave(){
+    if ($('input[name="name"]').val() == "" || typeof($('input[name="name"]').val()) == "undefined") {
+      Swal.fire('Campo NOME precisa estar preenchido!');
+      event.preventDefault();
+    }
+  }
+</script>
