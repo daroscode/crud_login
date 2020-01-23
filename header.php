@@ -12,6 +12,7 @@
     <meta name="description" content="CRUD em PHP">
     <meta name="keywords" content="PHP, Javascript, HTML, CSS" />
     <link href="assets/bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/iziToast/dist/css/iziToast.min.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
   </head>
   <body>

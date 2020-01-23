@@ -25,5 +25,13 @@
       Swal.fire('Campo NOME precisa estar preenchido!');
       event.preventDefault();
     }
+
+    if ($('input[name="surname"]').val() == "" || typeof($('input[name="surname"]').val()) == "undefined") {
+      iziToast.error({
+        title: 'Ops...',
+        message: 'SOBRENOME é campo obrigatório!'
+      });
+      event.preventDefault();
+    }
   }
 </script>
